@@ -1,0 +1,56 @@
+* {
+  background: #f4c4da;
+}
+
+.search-container {
+  position: absolute;
+  border-radius: 0 0 5px 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-container input {
+  width: 250px;
+  height: 30px;
+  font-size: 1rem;
+}
+
+body {
+  background: linear-gradient(to bottom, #ff7eb9, #82e0aa);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suggestions {
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(to bottom, #ff7eb9, #82e0aa);
+  border: 1px solid #f4c4da;
+  border-top: none;
+  border-radius: 0 0 5px 5px; /* this rounds the corners */
+  box-shadow: 0 2px 4px #82e0aa; /* slight box shadow */
+  max-height: 200px; /* limits the max height of the dropdown box */
+  overflow-y: auto; /* this creates a scrollbar if content is longer than the dropbox */
+  z-index: 1; /* this will make sure that the dropdown is above other content */
+}
+
+.suggestions ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* creates a smooth hover transition */
+}
+
+.suggestions li:hover {
+  background-color: #9cddb7; /* this is for the hover background color */
+}
